@@ -21,8 +21,25 @@ let currentUser = {
     email: "michryt@",
     showAll() {
             console.log(`imie to ${this.name}`)
+            console.log(`nazwisko to ${this.surname}`)
+            console.log(`email to ${this.email}`)
 
     }
 }
 
 currentUser.showAll()
+
+const book = {
+    autor: "Marek",
+    wydawca: "Mirek",
+    czytacz: "Antoni",
+    showDetails() {
+        Object.keys(this).forEach(el => {
+            if(typeof this[el] === "function"){}
+            else {
+                console.log(el, this[el])
+            }})
+    }
+}
+
+book.showDetails()
